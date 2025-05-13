@@ -6,7 +6,7 @@ def cnt_happy(arr):
     happy_row_cnt = 0
     for r in range(n):
         cnt = 1
-        now_see = grid[r][0]
+        now_see = arr[r][0]
         for c in range(1, n):
 
             if now_see == arr[r][c]:
