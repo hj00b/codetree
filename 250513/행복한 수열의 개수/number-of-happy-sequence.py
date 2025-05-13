@@ -14,6 +14,7 @@ def cnt_happy(arr):
 
             else:
                 now_see = arr[r][c]
+                cnt = 1
 
             if cnt >= m:
                 happy_row_cnt += 1
