@@ -11,22 +11,20 @@ def cnt_happy(arr):
         for c in range(1, n):
             if now_see == grid[r][c]:
                 cnt += 1
-                if cnt >= m:
-                    happy_row_cnt += 1
-                    break
-
+                
             else:
                 now_see = grid[r][c]
 
+            if cnt >= m:
+                happy_row_cnt += 1
+                break
     return happy_row_cnt
 
-if n == 1 and m == 1:
-    print(1)
-else:
-    ans = 0
-    ans += cnt_happy(grid)
 
-    grid = list(zip(*grid))
-    ans += cnt_happy(grid)
+ans = 0
+ans += cnt_happy(grid)
 
-    print(ans)
+grid = list(zip(*grid))
+ans += cnt_happy(grid)
+
+print(ans)
