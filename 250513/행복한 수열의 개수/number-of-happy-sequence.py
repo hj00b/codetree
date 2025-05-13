@@ -5,15 +5,16 @@ grid = [list(map(int, input().split())) for _ in range(n)]
 def cnt_happy(arr):
     happy_row_cnt = 0
 
-    for r in range(n):
+    for row in arr:
         cnt = 1
-        now_see = arr[r][0]
-        for c in range(1, n):
-            if now_see == arr[r][c]:
+        now_see = row[0]
+
+        for x in row[1:]:
+            if now_see == x:
                 cnt += 1
 
             else:
-                now_see = arr[r][c]
+                now_see = x
                 cnt = 1
 
             if cnt >= m:
@@ -22,10 +23,11 @@ def cnt_happy(arr):
     return happy_row_cnt
 
 
-ans = 0
-ans += cnt_happy(grid)
+if n == 1:
+    print(2)
+else:
+    ans = cnt_happy(grid)
+    new_grid = list(zip(*grid))
+    ans += cnt_happy(new_grid)
 
-new_grid = list(zip(*grid))
-ans += cnt_happy(new_grid)
-
-print(ans)
+    print(ans)
