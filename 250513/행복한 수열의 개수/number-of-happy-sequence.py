@@ -24,7 +24,7 @@ def cnt_happy(arr):
 ans = 0
 ans += cnt_happy(grid)
 
-grid = list(zip(*grid))
-ans += cnt_happy(grid)
+new_grid = list(zip(*grid))
+ans += cnt_happy(new_grid)
 
 print(ans)
