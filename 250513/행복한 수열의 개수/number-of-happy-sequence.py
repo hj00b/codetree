@@ -7,13 +7,13 @@ def cnt_happy(arr):
 
     for r in range(n):
         cnt = 1
-        now_see = grid[r][0]
+        now_see = arr[r][0]
         for c in range(1, n):
-            if now_see == grid[r][c]:
+            if now_see == arr[r][c]:
                 cnt += 1
-                
+
             else:
-                now_see = grid[r][c]
+                now_see = arr[r][c]
 
             if cnt >= m:
                 happy_row_cnt += 1
