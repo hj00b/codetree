@@ -9,13 +9,13 @@ def cnt_happy(arr):
         now_see = grid[r][0]
         for c in range(1, n):
 
-            if now_see == grid[r][c]:
+            if now_see == arr[r][c]:
                 cnt += 1
 
             else:
-                now_see = grid[r][c]
+                now_see = arr[r][c]
                 cnt = 1
-                
+
             if cnt >= m:
                 happy_row_cnt += 1
                 break
