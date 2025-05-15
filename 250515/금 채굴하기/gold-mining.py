@@ -26,7 +26,7 @@ def bfs(sr, sc):
         k = vis - 1
         cost = k**2 + (k + 1)**2
         money = total * m - cost
-        if money > 0:
+        if money >= 0:
             ans = max(ans, total)
 
 
