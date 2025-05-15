@@ -27,7 +27,7 @@ def bfs(sr, sc):
         cost = k**2 + (k + 1)**2
         money = total * m - cost
         if money > 0:
-            ans = total 
+            ans = max(ans, total)
 
 
         for d in range(4):
